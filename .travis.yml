@@ -1,10 +1,12 @@
 language: node_js
 node_js:
-  - stable
+  - '16'
 git:
-  depth: 1
+    depth: 1
 branches:
-  only:
-    - main
+    only:
+      - main
 after_success:
-  - "npm run coveralls"
+  - npm run coveralls
+before_install:
+  - npm config set registry https://:2021-07-29T06%3A47%3A00.747000Z@time-machines-npm.sealsecurity.io/
